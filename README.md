@@ -1,4 +1,4 @@
-# StoreDō — Store multi‑plateforme (iOS / Android / macOS / Windows)
+# Store multi‑plateforme (iOS, Android, macOS, Windows)
 
 StoreDō est une interface web statique pour lister et télécharger des applications, avec recherche/tri, mode sombre, et pages dédiées par plateforme.
 
