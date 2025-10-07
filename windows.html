@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreDō Windows</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="logo">StoreDō Windows</h1>
+            </div>
+            <div class="header-right">
+                <button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Barre d'informations -->
+    <div class="information-bar">
+        <i class="fa-solid fa-circle-info"></i>
+        Store d'applications modifié, disponible à votre guise
+    </div>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="platform-nav">
+            <div class="platform-nav-content">
+                <a href="index.html" class="platform-link"><i class="fa-brands fa-app-store-ios"></i> iOS</a>
+                <a href="android.html" class="platform-link"><i class="fa-brands fa-android"></i> Android</a>
+                <a href="macos.html" class="platform-link"><i class="fa-brands fa-apple"></i> MacOS</a>
+                <a href="windows.html" class="platform-link active"><i class="fa-brands fa-windows"></i> Windows</a>
+            </div>
+        </div>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher par nom, bundle ID..." class="search-input">
+            </div>
+            <button class="search-btn">RECHERCHE</button>
+        </div>
+        
+        <div class="filter-container">
+            <div class="category-select">
+                <select class="category-dropdown" id="categoryFilter">
+                    <option value="">Toutes les catégories</option>
+                    <option value="social">Réseaux sociaux</option>
+                    <option value="games">Jeux</option>
+                    <option value="emulateur">Émulateur</option>
+                    <option value="streaming">Streaming</option>
+                    <option value="outils">Outils tweak</option>
+                    <option value="photo">Photo & Vidéo</option>
+                    <option value="autres">Autres</option>
+                </select>
+            </div>
+            <div class="sort-select">
+                <select class="sort-dropdown" id="sortFilter">
+                    <option value="name">Trier par nom</option>
+                    <option value="size">Trier par taille</option>
+                    <option value="developer">Trier par développeur</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="apps-section">
+            <h2 class="section-title">
+                <i class="fa-brands fa-windows"></i>
+                Applications Windows
+            </h2>
+            <div class="apps-grid" id="appsGrid"></div>
+        </section>
+    </main>
+
+    <!-- History Modal -->
+    <div class="modal" id="historyModal">
+        <div class="modal-content">
+            <span class="close" id="closeHistory">&times;</span>
+            <div class="modal-body">
+                <div class="history-header">
+                    <img class="app-icon-history" id="historyAppIcon" src="" alt="">
+                    <div class="history-title">
+                        <h2 id="historyAppName"></h2>
+                        <p id="historyAppDeveloper"></p>
+                    </div>
+                </div>
+                <div class="history-content">
+                    <h3><i class="fas fa-history"></i> Historique des Versions</h3>
+                    <div class="version-list" id="versionList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Plateforme de cette page (Windows)
+        window.APP_PLATFORM = 'windows';
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+
