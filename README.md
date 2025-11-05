@@ -4,9 +4,9 @@
 <i>StoreDō est un store multi‑plateforme pour (iOS, Android, macOS, Windows) proposant des applications modifiées (tweaked) et d’autres outils provenant du Jailbreak iOS.</i>
 
 <p>
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/storedo/?style=for-the-badge&color=blue&label=last%20commit">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/storedo/?style=for-the-badge&color=blue">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/storedo/?style=for-the-badge&color=grey&label=languages">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/storedo?style=for-the-badge&color=blue&label=last%20commit">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/storedo?style=for-the-badge&color=blue">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/storedo?style=for-the-badge&color=grey&label=languages">
 </p>
 
 <p align="center">
