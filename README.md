@@ -20,7 +20,7 @@
     <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white">
   </a>
   <a href="https://www.w3.org/Style/CSS/">
-    <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white">
+    <img alt="CSS" src="https://img.shields.io/badge/CSS-563d7c?&style=flat&logo=css3&logoColor=white">
   </a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
     <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black">
