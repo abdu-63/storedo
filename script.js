@@ -97,7 +97,7 @@ const appsData = [
         platforms: ['ios'],
     },
     {
-        id: 7,
+        id: 6,
         name: "Stop Motion Studio",
         developer: "Cateater",
         version: "11.4.4",
@@ -109,7 +109,7 @@ const appsData = [
         platforms: ['ios'],
     },
     {
-        id: 8,
+        id: 7,
         name: "Mimo Pro",
         developer: "blatants",
         version: "7.7.0",
@@ -121,19 +121,19 @@ const appsData = [
         platforms: ['ios'],
     },
     {
-        id: 9,
+        id: 8,
         name: "Blacklist",
         developer: "AppInstalleriOS",
         version: "1.4.2",
         bundleId: "com.AppInstalleriOS.Blacklist",
         size: "1.3 Mo",
-        icon: "https://ipaomtk.com/wp-content/uploads/2023/02/blacklist-app-1.png",
+        icon: "https://www.udrop.com/file/O7uu/blacklist.jpg",
         downloadUrl: "https://file.ipaomtk.com/ipa/Blacklist1.ipa",
         category: "outils",
         platforms: ['ios'],
     },
     {
-        id: 10,
+        id: 9,
         name: "DebtoIPA",
         developer: "sourcelocation",
         version: "1.1.1",
@@ -145,7 +145,7 @@ const appsData = [
         platforms: ['ios'],
     },
     {
-        id: 11,
+        id: 10,
         name: "Helium",
         developer: "leminlimez",
         version: "3.2.5",
@@ -157,19 +157,19 @@ const appsData = [
         platforms: ['ios'],
     },
     {
-        id: 12,
+        id: 11,
         name: "Wifi List",
         developer: "Itaybre",
         version: "1.1.0",
         bundleId: "com.itaysoft.wifilist",
         size: "1.2 Mo",
-        icon: "https://ipaomtk.com/wp-content/uploads/2023/02/WifiLis-1.jpg",
+        icon: "https://www.udrop.com/file/O7us/wifilist.jpg",
         downloadUrl: "https://github.com/Mikasa-san/TrollStore-Apps/raw/refs/heads/main/WiFiList.ipa",
         category: "outils",
         platforms: ['ios'],
     },
     {
-        id: 13,
+        id: 12,
         name: "Filza",
         developer: "tigisoftware",
         version: "4.0.2",
@@ -355,7 +355,7 @@ const appsData = [
         version: "6.1.3",
         bundleId: "appcake2.iphonecake.com",
         size: "23.1 Mo",
-        icon: "https://www.iphonecake.com/i/images/logo.png",
+        icon: "https://www.udrop.com/file/O7ur/appcake.jpg",
         downloadUrl: "https://www.udrop.com/file/NVCs/AppCake_6.1.3.ipa",
         category: "outils",
         platforms: ['ios'],
@@ -380,7 +380,7 @@ const appsData = [
         bundleId: "com.duolingo.DuolingoMobile",
         size: "112.2 Mo",
         icon: "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/7a/b1/e0/7ab1e00a-0cd7-c239-6eae-a681f19599ff/AppIcon-0-0-1x_U007epad-0-1-85-220.png/350x350bb.jpg",
-        downloadUrl: "https",
+        downloadUrl: "https://www.udrop.com/file/NVCe/Duolingo_7.53.0.ipa",
         category: "social",
         platforms: ['ios'],
     },
@@ -463,7 +463,7 @@ const appsData = [
         version: "1.2.1",
         bundleId: "xyz.cypwn.sm64ios-60fps",
         size: "9.9 Mo",
-        icon: "https://www.iphonecake.com/tweakicons/icon.1707659017.png",
+        icon: "https://www.udrop.com/file/O7ut/supermario64.png",
         downloadUrl: "https://archive.org/download/super-mario-64_202409/SuperMario64_60FPS_1.2.1.ipa",
         category: "games",
         platforms: ['ios'],
@@ -549,7 +549,7 @@ let currentCategory = '';
 let currentSort = 'name';
 
 // Initialisation
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Respect page-level platform filter if provided
     filterApps();
     setupEventListeners();
@@ -643,12 +643,12 @@ function filterApps() {
         const pagePlatform = typeof window !== 'undefined' ? window.APP_PLATFORM : '';
         const appPlatforms = Array.isArray(app.platforms) && app.platforms.length > 0 ? app.platforms : ['ios'];
 
-        const matchesSearch = currentSearchTerm === '' || 
+        const matchesSearch = currentSearchTerm === '' ||
             app.name.toLowerCase().includes(currentSearchTerm) ||
             app.developer.toLowerCase().includes(currentSearchTerm) ||
             app.bundleId.toLowerCase().includes(currentSearchTerm);
 
-        const matchesCategory = currentCategory === '' || 
+        const matchesCategory = currentCategory === '' ||
             app.category === currentCategory;
 
         const matchesPlatform = !pagePlatform || appPlatforms.includes(pagePlatform);
@@ -674,7 +674,7 @@ function filterApps() {
 
     filteredApps = apps;
     renderApps();
-    
+
     // Afficher le nombre de résultats
     updateResultsCount();
 }
@@ -684,7 +684,7 @@ function updateResultsCount() {
     const sectionTitle = document.querySelector('.section-title');
     const count = filteredApps.length;
     const total = appsData.length;
-    
+
     if (count === total) {
         sectionTitle.innerHTML = '<i class="fa-solid fa-cloud-arrow-down"></i> Applications';
     } else {
@@ -705,18 +705,18 @@ function downloadApp(appId) {
 
     // Afficher notification de début de téléchargement
     showNotification(`Téléchargement de ${app.name} en cours...`, 'info');
-    
+
     // Créer un lien de téléchargement temporaire
     const downloadLink = document.createElement('a');
     downloadLink.href = app.downloadUrl;
     downloadLink.download = `${app.name}-${app.version}.ipa`;
     downloadLink.target = '_blank';
-    
+
     // Déclencher le téléchargement
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
-    
+
     // Notification de succès après un délai
     setTimeout(() => {
         showNotification(`${app.name} téléchargé avec succès!`, 'success');
@@ -797,16 +797,16 @@ function downloadVersion(downloadUrl, appName, version) {
     }
 
     showNotification(`Téléchargement de ${appName} v${version} en cours...`, 'info');
-    
+
     const downloadLink = document.createElement('a');
     downloadLink.href = downloadUrl;
     downloadLink.download = `${appName}-${version}.ipa`;
     downloadLink.target = '_blank';
-    
+
     document.body.appendChild(downloadLink);
     downloadLink.click();
     document.body.removeChild(downloadLink);
-    
+
     setTimeout(() => {
         showNotification(`${appName} v${version} téléchargé avec succès!`, 'success');
     }, 1500);
@@ -829,7 +829,7 @@ function showNotification(message, type = 'info') {
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
     notification.textContent = message;
-    
+
     // Styles de notification
     notification.style.cssText = `
         position: fixed;
@@ -847,7 +847,7 @@ function showNotification(message, type = 'info') {
     `;
 
     // Couleurs selon le type
-    switch(type) {
+    switch (type) {
         case 'success':
             notification.style.backgroundColor = '#28a745';
             break;
@@ -883,7 +883,7 @@ function setupEventListeners() {
     // Recherche
     const searchInput = document.querySelector('.search-input');
     const searchBtn = document.querySelector('.search-btn');
-    
+
     searchInput.addEventListener('input', searchApps);
     searchBtn.addEventListener('click', searchApps);
 
@@ -898,7 +898,7 @@ function setupEventListeners() {
     // Fermeture du modal d'historique
     const historyModal = document.getElementById('historyModal');
     const closeHistoryBtn = document.getElementById('closeHistory');
-    
+
     closeHistoryBtn.addEventListener('click', closeHistoryModal);
     historyModal.addEventListener('click', (e) => {
         if (e.target === historyModal) {
@@ -915,7 +915,7 @@ function setupEventListeners() {
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     const themeIcon = document.querySelector('.theme-toggle i');
-    
+
     if (document.body.classList.contains('dark-mode')) {
         themeIcon.className = 'fas fa-sun';
         localStorage.setItem('darkMode', 'true');
@@ -945,7 +945,7 @@ function filterByCountry(country) {
 }
 
 // Gestion des erreurs
-window.addEventListener('error', function(e) {
+window.addEventListener('error', function (e) {
     console.error('Erreur JavaScript:', e.error);
     showNotification('Une erreur est survenue. Veuillez recharger la page.', 'error');
 });
